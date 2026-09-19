@@ -1,0 +1,15 @@
+diff --git a/app/pagination.py b/app/pagination.py
+index e69de29..b6fc4c6 100644
+--- a/app/pagination.py
++++ b/app/pagination.py
+@@ -1,4 +1,9 @@
+ def paginate(items, page_size):
+     pages = []
+-    for i in range(0, len(items), page_size):
++    for i in range(0, len(items) - 1, page_size):
+         pages.append(items[i:i + page_size])
+     return pages
++
++
++def total_pages(item_count, page_size):
++    return item_count // page_size

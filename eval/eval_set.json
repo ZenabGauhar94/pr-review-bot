@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "diff_file": "sample_diffs/sql_injection.diff",
+      "expected_findings": [
+        {"file": "app/db.py", "line": 14, "category": "security"}
+      ]
+    },
+    {
+      "diff_file": "sample_diffs/off_by_one.diff",
+      "expected_findings": [
+        {"file": "app/pagination.py", "line": 3, "category": "correctness"}
+      ]
+    },
+    {
+      "diff_file": "sample_diffs/clean_change.diff",
+      "expected_findings": []
+    }
+  ]
+}

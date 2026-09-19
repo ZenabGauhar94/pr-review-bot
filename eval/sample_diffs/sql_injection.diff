@@ -1,0 +1,15 @@
+diff --git a/app/db.py b/app/db.py
+index e69de29..b6fc4c6 100644
+--- a/app/db.py
++++ b/app/db.py
+@@ -10,6 +10,10 @@ class UserRepository:
+     def __init__(self, conn):
+         self.conn = conn
+ 
++    def get_user_by_name(self, username):
++        query = "SELECT * FROM users WHERE name = '" + username + "'"
++        return self.conn.execute(query).fetchone()
++
+     def get_user_by_id(self, user_id: int):
+         query = "SELECT * FROM users WHERE id = ?"
+         return self.conn.execute(query, (user_id,)).fetchone()
