@@ -8,6 +8,9 @@ Unlike a simple "paste the diff into an LLM" script, this project is built
 as a small pipeline with validated structured output and a measured eval
 set — see [Evaluation](#evaluation) below.
 
+## Demo
+![Bot flagging a SQL injection on a PR](demo.PNG)
+
 ## How it works
 
 PR opened/updated
@@ -165,3 +168,5 @@ pr-review.yml # the Action itself
 Python 3.11 · GPT-OSS 120B via Groq (free, OpenAI-compatible API) ·
 `pydantic` for schema validation · `ruff` for static analysis ·
 GitHub REST API · GitHub Actions
+
+
